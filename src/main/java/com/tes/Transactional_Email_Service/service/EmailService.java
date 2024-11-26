@@ -34,7 +34,7 @@ public class EmailService {
         emailEntity.setStatus("QUEUED");
 
         try {
-            com.sendgrid.helpers.mail.objects.Email from = new com.sendgrid.helpers.mail.objects.Email("aaina0099@gmail.com");
+            com.sendgrid.helpers.mail.objects.Email from = new com.sendgrid.helpers.mail.objects.Email("YOUR_VERIFIED_EMAILID");
             com.sendgrid.helpers.mail.objects.Email to = new com.sendgrid.helpers.mail.objects.Email(request.getRecipient());
             Content content = new Content("text/plain", request.getBody());
             Mail mail = new Mail(from, request.getSubject(), to, content);
